@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 public class UserRecord {
 
     @Id
-    @GeneratedValue()
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; // Change from long to Long
 
     @Column(nullable = false)
     private String name;
